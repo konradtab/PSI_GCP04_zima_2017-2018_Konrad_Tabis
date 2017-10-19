@@ -26,9 +26,10 @@ public class Perceptron {
     //algorytm uczenia perceptronu
     public void learn_perceptron(int x0, int x1, int x2, double y, double  learning_factor)
     {
-        double perceptronOut = x0 * weight0 + x1 * weight1 + x2 * weight2;
-        perceptronOut = perceptronOut(perceptronOut);
-        weight0 += ( y - perceptronOut ) * learning_factor * x0;
+        //double perceptronOut = x0 * weight0 + x1 * weight1 + x2 * weight2;
+        //perceptronOut = perceptronOut(perceptronOut);
+        double percOut=process(x0,x1,x2);
+        weight0 += ( y - percOut ) * learning_factor * x0;
     }
 
 }
